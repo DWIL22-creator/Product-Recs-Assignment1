@@ -41,17 +41,22 @@ def count_matches(product_tags, customer_tags):
             print("Found a match...")
             count+=1
 
-    return f"We found {count} products with matching tags!"
+    return count
 
 # TODO: Step 6 - Write a function that loops over all products and returns a sorted list of matches
 def recommend_products(products, customer_preferences):
     reccomendations = []
     for product in products:
         count_matches = customer_preferences.intersection(set(product['tags']))
-        if count_matches:
+        if count_matches > 0:
             print("Reccomended Products:\n")
             reccomendations.append(f"-{{'name': '{product['name']}', 'matches': {count_matches()}}}\n")
             return reccomendations
+
+        else:
+            print("No products match your preferences.")
+            return reccomendations
+        
     if not reccomendations:
         return "No products match your preferences."
     
@@ -64,7 +69,7 @@ def recommend_products(products, customer_preferences):
 
 
 # TODO: Step 7 - Call your function and print the results
-recommend_products(products, customer_preferences)
+recommend_products(products, set_preferences)
 
 
 
