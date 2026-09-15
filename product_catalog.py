@@ -71,9 +71,11 @@ recommend_products(converted_products, set_preferences)
 # DESIGN MEMO (write below in a comment):
 
 # 1. What core operations did you use (e.g., intersections, loops)? Why?
-#The core operations I used in my code are loops, if statements, functions, lists, sets, and dictionaries.  
-# I used loops to iterate through the products and customer preferences, if statements to check the matches, functions to focus on several tasks, and lists to store edit the products and cutomer preferences.
-#Dictionaries allow you to store the product name and add tags to certain products. But sets are important because they eliminate dupliates in the list. For example, if a customer enters the same preference twice, the set_preferences set eliminates the duplicate.
+#The core operations I used in my code are loops, if statements, functions, lists, sets, and dictionaries. 
+#The dictionary stored all of the products in the catalog and their associated tags.
+# I used for loops to iterate through the products and customer preferences, if statements to check the matches, functions to focus on several tasks, and lists to store edit the products and cutomer preferences.
+#Sets are important because they eliminate dupliates in the list. For example, if a customer enters the same preference twice, the set_preferences set eliminates the duplicate.
+#I also used logical operators to not reccomend products that have no matches with the customer preferences.
 #If I were to do this assignment again, I would've used intersection to find the matches between product tags and customer preferences to simplify the code.
 
 # 2. How might this code change if you had 1000+ products?
